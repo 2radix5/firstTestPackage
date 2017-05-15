@@ -18,4 +18,5 @@ Imports:
  maps,
  readr,
  tidyr,
- graphics
+ graphics,
+ testhat
