@@ -36,8 +36,8 @@ fars_read <- function(filename) {
         })
         dplyr::tbl_df(data)
 }
-df <- fars_read("../extdata/accident_2013.csv")
-knitr::kable(head(df[1:8], 10))
+#df <- fars_read("../extdata/accident_2013.csv")
+#knitr::kable(head(df[1:8], 10))
 ```
 
 ## Write file name attaching desired year
@@ -55,7 +55,7 @@ make_filename <- function(year) {
         year <- as.integer(year)
         sprintf("accident_%d.csv.bz2", year)
 }
-make_filename(2013)
+#make_filename(2013)
 ```
 
 ## Read a specific year file and Select MONTH, year columns of it.
@@ -69,7 +69,7 @@ Examples:
 This is a result only 10 rows :      
 ```{r, echo=FALSE, message=FALSE, results='asis'}
 library(dplyr)
-setwd("~/firstTestPackage/extdata")
+#setwd("~/firstTestPackage/extdata")
 fars_read_years <- function(years) {
         lapply(years, function(year) {
                 file <- make_filename(year)
@@ -83,8 +83,8 @@ fars_read_years <- function(years) {
                 })
         })
 }
-temp <- as.data.frame(fars_read_years(2013))
-knitr::kable(head(temp, 10))
+#temp <- as.data.frame(fars_read_years(2013))
+#knitr::kable(head(temp, 10))
 ```
 
 
@@ -100,7 +100,7 @@ Examples:
 This is a result
 ```{r, echo=FALSE, message=FALSE, results='asis'}
 library(dplyr)
-setwd("~/firstTestPackage/extdata")
+#setwd("~/firstTestPackage/extdata")
 fars_summarize_years <- function(years) {
         dat_list <- fars_read_years(years)
         dplyr::bind_rows(dat_list) %>%
@@ -108,8 +108,8 @@ fars_summarize_years <- function(years) {
                 dplyr::summarize(n = n()) %>%
                 tidyr::spread(year, n)
 }
-fs <- fars_summarize_years(2013)
-knitr::kable(fs)
+#fs <- fars_summarize_years(2013)
+#knitr::kable(fs)
 ```
 
 ## Map a specific state's accidents in a specific year selected
@@ -127,7 +127,7 @@ knitr::kable(fs)
 
 ```{r, echo=FALSE, message=FALSE, results='asis'}
 library(maps)
-setwd("~/firstTestPackage/extdata")
+#setwd("~/firstTestPackage/extdata")
 fars_map_state <- function(state.num, year) {
         filename <- make_filename(year)
         data <- fars_read(filename)
@@ -148,5 +148,5 @@ fars_map_state <- function(state.num, year) {
                 graphics::points(LONGITUD, LATITUDE, pch = 46)
         })
 }
-fars_map_state(1, 2013)
+#fars_map_state(1, 2013)
 ```
