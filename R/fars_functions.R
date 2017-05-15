@@ -27,7 +27,7 @@ fars_read <- function(filename) {
         })
         dplyr::tbl_df(data)
 }
-fars_read("extdata/accident_2013.csv")
+
 
 
 

@@ -26,6 +26,8 @@ The `fars_read(filename)` function is for reading a CSV file into R. The FARS fi
      
 This is a result table: just shown 8 columns dut to screen size 
 ```{r, echo=FALSE, message=FALSE, results='asis'}
+install.packages("readr")
+install.packages("dplyr")
 library(readr)
 library(dplyr)
 fars_read <- function(filename) {
