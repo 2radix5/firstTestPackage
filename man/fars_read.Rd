@@ -18,6 +18,11 @@ This is a simple function that reads a csv(common separated values) file and cre
 with cases corresponding to rows(lines) and variables to columns(fields) in the file. tbl objects only print
 a few rows and all the columns that fit on one screen, describing the rest of it as text.
 }
+\section{Warning}{
+
+Function will skip year if file with data for year does not exists
+}
+
 \examples{
 fars_read("extdata/accident_2013.csv")
 

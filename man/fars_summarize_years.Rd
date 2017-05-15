@@ -2,12 +2,12 @@
 % Please edit documentation in R/fars_functions.R
 \name{fars_summarize_years}
 \alias{fars_summarize_years}
-\title{Summ count by month of the year}
+\title{Sum count by month of the year}
 \usage{
 fars_summarize_years(years)
 }
 \arguments{
-\item{years}{A non-negative interger specifying the desired year.}
+\item{years}{A vector of years values (A non-negative interger specifying the desired year)}
 }
 \value{
 A tbl including MONTH and it's count value. Total 12 rows and month and count columns will be shown.
@@ -19,6 +19,7 @@ A tbl including MONTH and it's count value. Total 12 rows and month and count co
 \examples{
 \dontrun{fars_summarize_years(2013)}
 \dontrun{fars_summarize_years("2013")}
+\dontrun{fars_summarize_years(c("2013","2014")}
 
 }
 \seealso{
