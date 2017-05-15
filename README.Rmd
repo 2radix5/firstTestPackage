@@ -9,5 +9,5 @@ output: github_document
 Refer detail documentation in the \man directory
 
 ## Travic CI image
-
+[![Build Status](https://travis-ci.org/2radix5/firstTestPackage.svg?branch=master)](https://travis-ci.org/2radix5/firstTestPackage)
 
