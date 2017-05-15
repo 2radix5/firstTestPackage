@@ -62,7 +62,8 @@ make_filename <- function(year) {
 #'
 #' @return A specific columns of loaded data. The MONTH, YEAR columns will be selected
 #'
-#' @importFrom dplyr mutate, select
+#' @importFrom dplyr mutate
+#' @importFrom dplyr select
 #'
 #' @examples
 #' \dontrun{fars_read_years(2013)}
@@ -94,7 +95,9 @@ fars_read_years <- function(years) {
 #' @return A tbl including MONTH and it's count value. Total 12 rows and month and count columns will be shown.
 #'
 #'
-#' @importFrom dplyr bind_rows, group_by, summarize
+#' @importFrom dplyr bind_rows
+#' @importFrom dplyr group_by
+#' @importFrom dplyr summarize
 #' @importFrom tidyr spread
 #'
 #' @seealso \code{\link{fars_read_years}}
