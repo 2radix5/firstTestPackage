@@ -18,6 +18,8 @@ A map of a state marked accidents as circle
 Map a specific state's accidents in a specific year selected.
 }
 \examples{
+library(maps)
+library(graphics)
 \dontrun{fars_map_state(1, 2013)}
 
 

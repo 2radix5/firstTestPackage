@@ -17,6 +17,7 @@ A tbl including MONTH and it's count value. Total 12 rows and month and count co
              And then summarize counting by month of the year by \code{\link[dplyr]{summarize}}
 }
 \examples{
+library(tidyr)
 \dontrun{fars_summarize_years(2013)}
 \dontrun{fars_summarize_years("2013")}
 \dontrun{fars_summarize_years(c("2013","2014")}

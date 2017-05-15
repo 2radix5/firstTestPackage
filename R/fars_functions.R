@@ -16,7 +16,10 @@
 #' @importFrom dplyr tbl_df
 #'
 #' @examples
-#' fars_read("extdata/accident_2013.csv")
+#'  library(dplyr)
+#'  library(readr)
+#'
+#'  \dontrun{fars_read("accident_2013.csv")}
 #'
 #' @export
 fars_read <- function(filename) {
@@ -103,6 +106,7 @@ fars_read_years <- function(years) {
 #' @seealso \code{\link{fars_read_years}}
 #'
 #' @examples
+#' library(tidyr)
 #' \dontrun{fars_summarize_years(2013)}
 #' \dontrun{fars_summarize_years("2013")}
 #' \dontrun{fars_summarize_years(c("2013","2014")}
@@ -131,6 +135,8 @@ fars_summarize_years <- function(years) {
 #' @seealso \code{\link{fars_read}} \code{\link{make_filename}} \code{\link{make_filename}} \code{\link{make_filename}}
 #'
 #' @examples
+#' library(maps)
+#' library(graphics)
 #' \dontrun{fars_map_state(1, 2013)}
 #'
 #'

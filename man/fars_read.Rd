@@ -24,6 +24,9 @@ Function will skip year if file with data for year does not exists
 }
 
 \examples{
-fars_read("extdata/accident_2013.csv")
+ library(dplyr)
+ library(readr)
+
+ \dontrun{fars_read("accident_2013.csv")}
 
 }
